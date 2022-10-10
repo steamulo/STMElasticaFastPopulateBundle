@@ -1,0 +1,14 @@
+{
+  "name": "steamulo/elastica-fast-populate-bundle",
+  "type": "symfony-bundle",
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "enqueue/elastica-bundle": "^0.12.0",
+    "symfony/process": "^4.4 || ^5.4 || ^6.0"
+  },
+  "autoload": {
+    "psr-4" : {
+      "STM\\ElasticaFastPopulateBundle\\" : "src/"
+    }
+  }
+}

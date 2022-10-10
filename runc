@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ ! "$(docker-compose --compatibility ps -q php-fpm)" ]; then
+   echo "Unable to connect to docker container. Have you run 'docker-compose up -d' ?"
+else
+   docker-compose --compatibility exec php-fpm $@
+fi

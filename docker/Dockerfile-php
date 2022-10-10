@@ -1,0 +1,11 @@
+FROM php:8.1-fpm
+ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
+
+RUN chmod uga+x /usr/local/bin/install-php-extensions && sync && \
+    install-php-extensions xdebug apcu mongodb
+
+RUN curl -sS https://getcomposer.org/installer | php -- --version=2.4.2 --install-dir=/usr/local/bin --filename=composer
+
+RUN apt update && apt install -y zip unzip git
+
+CMD ["php-fpm", "-R"]
