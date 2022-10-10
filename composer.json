@@ -1,6 +1,9 @@
 {
   "name": "steamulo/elastica-fast-populate-bundle",
   "type": "symfony-bundle",
+  "description": "Improves performance of fos:elastica:populate command from FOSElasticaBundle by distributing the work among consumers.",
+  "keywords": ["elasticsearch", "elastica", "fos", "performance"],
+  "license": "MIT",
   "require": {
     "php": "^7.4 || ^8.0",
     "enqueue/elastica-bundle": "^0.12.0",
